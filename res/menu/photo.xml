@@ -78,4 +78,12 @@
     <item android:id="@+id/print"
           android:title="@string/print_image"
           android:showAsAction="never" />
+    <item
+        android:id="@+id/add_to_white_list"
+        android:showAsAction="never"
+        android:title="Add to white list"/>
+    <item
+        android:id="@+id/remove_from_white_list"
+        android:showAsAction="never"
+        android:title="Remove from white list"/>
 </menu>

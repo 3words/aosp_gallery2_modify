@@ -1098,6 +1098,15 @@ public abstract class PhotoPage extends ActivityState implements
                 mSelectionManager.toggle(path);
                 mMenuExecutor.onMenuClicked(item, confirmMsg, mConfirmDialogListener);
                 return true;
+
+            case R.id.add_to_white_list:
+                manager.setImageWhiteListed(path, true);
+                return true;
+
+            case R.id.remove_from_white_list:
+                manager.setImageWhiteListed(path, false);
+                return true;
+
             default :
                 return false;
         }

@@ -16,6 +16,7 @@
 
 package com.android.gallery3d.data;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.ContentObserver;
 import android.net.Uri;
@@ -310,6 +311,13 @@ public class DataManager implements StitchingChangeListener {
             }
         }
         broker.registerNotifier(notifier);
+    }
+
+    public void setImageWhiteListed(Path path, boolean whiteListed) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("in_white_list", whiteListed ? 1 : 0);
+        mApplication.getContentResolver().update(getContentUri(path),
+                contentValues, null, null);
     }
 
     public void resume() {
