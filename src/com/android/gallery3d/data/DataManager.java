@@ -315,8 +315,15 @@ public class DataManager implements StitchingChangeListener {
 
     public void setImageWhiteListed(Path path, boolean whiteListed) {
         ContentValues contentValues = new ContentValues();
-        contentValues.put("in_white_list", whiteListed ? 1 : 0);
+        contentValues.put("in_white_list", whiteListed);
         mApplication.getContentResolver().update(getContentUri(path),
+                contentValues, null, null);
+    }
+
+    public void setWhiteListEnabled(boolean enabled) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("show_only_white_list", enabled);
+        mApplication.getContentResolver().update(Uri.parse("content://media/external/images/media"),
                 contentValues, null, null);
     }
 

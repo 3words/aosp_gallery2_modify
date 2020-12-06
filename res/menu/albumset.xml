@@ -34,4 +34,12 @@
             android:title="@string/help"
             android:visible="false"
             android:showAsAction="never" />
+    <item android:id="@+id/action_white_list_enable"
+            android:title="@string/enable_white_list"
+            android:visible="true"
+            android:showAsAction="never" />
+    <item android:id="@+id/action_white_list_disable"
+        android:title="@string/disable_white_list"
+        android:visible="true"
+        android:showAsAction="never" />
 </menu>

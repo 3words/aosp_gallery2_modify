@@ -618,6 +618,16 @@ public class AlbumSetPage extends ActivityState implements
                 activity.startActivity(new Intent(activity, GallerySettings.class));
                 return true;
             }
+            case R.id.action_white_list_enable: {
+                Log.d(TAG, "action_white_list_enable");
+                mActivity.getDataManager().setWhiteListEnabled(true);
+                return true;
+            }
+            case R.id.action_white_list_disable: {
+                Log.d(TAG, "action_white_list_disable");
+                mActivity.getDataManager().setWhiteListEnabled(false);
+                return true;
+            }
             default:
                 return false;
         }

@@ -278,6 +278,9 @@
          some albums to be viewable offline [CHAR LIMIT=30] -->
     <string name="make_available_offline">Make available offline</string>
 
+    <string name="enable_white_list">Enable white list</string>
+    <string name="disable_white_list">Disable white list</string>
+
     <!-- A label of a menu item for user to sync the content [CHAR LIMIT=30] -->
     <string name="sync_picasa_albums">Refresh</string>
 

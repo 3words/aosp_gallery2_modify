@@ -17,6 +17,7 @@
 package com.android.gallery3d.app;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Rect;
@@ -557,7 +558,6 @@ public class AlbumPage extends ActivityState implements GalleryActionBar.Cluster
             menu.findItem(R.id.action_camera).setVisible(
                     MediaSetUtils.isCameraSource(mMediaSetPath)
                     && GalleryUtils.isCameraAvailable(mActivity));
-
         }
         actionBar.setSubtitle(null);
         return true;
